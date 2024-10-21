@@ -2,10 +2,55 @@
     <head>
         <title>Postcard Trails</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet">
+        <img src="assets/postcardTrails.svg" style="position: absolute;top: 15px; left: 12px; width: 130px; height: auto;">
     </head>
-    <body>
+    <body onload="startTime()">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="script.js"></script>
-        
+        <!-- <div class="postcard-1">
+            <div class="frontCard-1"></div>
+            <div class="backCard-1"></div>
+        </div> -->
+
+        <div class="aboutCard" id="Card">
+            <div class="landingPageTextBox">
+            <p>Welcome to Postcard Trails,<br>where each postcard serves<br>as a stepping stone on a<br>journey filled with memories,<br> 
+                stories, and adventures.<br>This space is dedicated to<br>documenting my travels<br>through the nostalgic<br>charm of 
+                postcards, where<br>each postcard is a visual<br>diary, showcasing<br>breathtaking landscapes,<br> vibrant cultures, and<br> 
+                unforgettable encounters<br>from my travels.</p>
+            </div>
+            <div class="verticleLine"></div>
+            <div class="rightContainer">
+                <div class="align">
+                    <div id="time"></div>  
+                    <a href="#" onclick="Hide(Card);">ⓧ</a>
+                    <!-- <button class="xButton" aria-label="Close alert" type="button" data-close>
+                        <span aria-hidden="true">&times;</span>
+                    </button> -->
+                </div>
+                <div class ="address">
+                    <p2>To: You</p2>
+                    <div class="horizontalLine"></div>
+                    <p2>wherever</p2>
+                    <div class="horizontalLine"></div>
+                    <p2>your heart</p2>
+                    <div class="horizontalLine"></div>
+                    <p2>may wonder</p2>
+                    <div class="horizontalLine"></div>
+                </div>
+            </div>
+        </div>
+    <div class="nav">
+        <h6>All</h6>
+        <h6>Favorites</h6>
+        <h6>Anecdotes</h6>
+        <h6>Rediscover</h6>
+        <h6>Artifacts</h6>
+        <h6>Insights</h6>
+    </div>
+    <div class="frontCard-1"></div>
     </body>
 </html>
