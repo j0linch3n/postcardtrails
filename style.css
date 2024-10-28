@@ -10,6 +10,64 @@
     font-family: 'alteHassGrotesk_Regular';
     src: url(assets/AlteHaasGroteskRegular.ttf);
 }
+/* .myDiv{
+    border: 1px solid black;
+    width: 150vw;
+    height: 170vh;
+    position: absolute;
+}
+.move {
+    background-color: aqua;
+    overflow: hidden;
+    z-index: 0;
+    width: 150vw;
+    height: 170vh;
+    
+} */
+#about{
+    font-family: 'alteHassGrotesk_Regular';
+    font-size: 12pt;
+    position: fixed;
+    top: 15px; 
+    left: 48%;
+    border: none;
+    background-color: transparent;
+    z-index: 1000000;
+    border: 1px solid, black;
+    background-color: #FFF9F1;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
+#map{
+    font-family: 'alteHassGrotesk_Regular';
+    font-size: 12pt;
+    position: fixed;
+    top: 15px; 
+    left: 48%;
+    border: none;
+    background-color: transparent;
+    z-index: 1000000;
+    border: 1px solid, black;
+    background-color: #FFF9F1;
+    padding: 0.5rem;
+    border-radius: 2rem;
+} 
+#demo{
+    position: fixed;
+    bottom: 0px; 
+    left: 20px;
+    z-index: 1000000;
+}
+.grid{
+    position: absolute;
+    inset: 0;
+    height: 170vh;
+    width: 150vw;
+    background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
+    linear-gradient(to bottom, #80808012 1px, transparent 1px);
+    background-size: 24px 24px;
+    z-index: -100;
+}
 body{
     background-color: #FFF9F1;
 }
@@ -19,12 +77,18 @@ body{
     gap: 20px;
     margin-left: 60%;
 }
-#time{
+#clock{
     font-family: 'alteHassGrotesk_Regular';
     font-size: 11pt;
     margin-top: 8%;
     margin-left: 90%;
     align-items: flex-end;
+}
+.wrapper{
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .aboutCard a{
     font-family: 'alteHassGrotesk_Bold';
@@ -32,23 +96,22 @@ body{
     margin-top: 5%;
     text-decoration: none;
     color: black;
-   
 }
 .aboutCard{
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10%;
+    position: fixed;
     width: 715px;
     height: 477px;
     background-color: #FBF8EC;
+    z-index: 100;
     box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15), 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 1px;
 }
 .verticleLine{
     display: inline-block;
     border-left: 1.5px solid black;
     height: 450px;
-    margin-top: 2%;
+    margin-top: 2%;   
 }
 .landingPageTextBox{
     display: inline-block;
@@ -76,12 +139,6 @@ body{
     
 
 }
-/* [class^="postcard-"]{
-    margin: 20px;
-    width: 715px;
-    height: 477px;
-    background-color: #FBF8EC;
-} */
 [class^="frontCard-"]{
     margin: 20px;
     width: 715px;
@@ -89,15 +146,56 @@ body{
     background-color: #FBF8EC;
 }
 [class^="backCard-"]{
+    display: flex;
+    position: fixed;
+    padding: 10px;
     margin: 20px;
     width: 715px;
     height: 477px;
     background-color: #FBF8EC;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15), 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 1px;
+}
+.left{
+    padding:15;
+}
+.right{
+    padding:15;
+}
+#tag{
+    font-family: 'alteHassGrotesk_Regular';
+    font-size: 11pt;
+    text-transform: uppercase;
+    line-height: 3pt;
+}
+#time{
+    font-family: 'alteHassGrotesk_Regular';
+    font-size: 10pt;
+    text-align: right;
+    padding-top: 10;
+}
+#location{
+    font-family: 'alteHassGrotesk_Regular';
+    font-size: 10pt;
+    text-align: right;
+    position:absolute;
+    bottom: 20px;
+    right:20px;
+}
+h1{
+    color: #FFF9F1;
+    display: flex;
+    justify-content: center;
+    position:-webkit-sticky;
+    position: fixed;
+    bottom: 15px;
+    width: 100%;
 }
 h2{
     font-family:  'alteHassGrotesk_Bold';
-    font-size: 20pt; 
-    padding: 20px;
+    font-size: 20pt;
+    line-height: 0; 
+    text-transform: uppercase;
 }
 p{
     font-family: "The Girl Next Door",cursive;
@@ -106,30 +204,94 @@ p{
     margin-left: 5%;
     /* width: 45%; */
 }
-
 p2{
     margin-left: 40%;
     font-family: "The Girl Next Door",cursive;
     font-size: 16pt;
     line-height: 10pt;
 }
+p3{
+    font-family: "The Girl Next Door",cursive;
+    font-size: 13pt;
+    line-height: 16pt;
+    height:80%;
+    display: flex;
+    align-items: center;
+}
 .nav{
     display: flex;
     justify-content: center;
     gap:5px;
     position:-webkit-sticky;
-    position: sticky;
-    bottom: 0;
-    z-index: 2147483647;
+    position: fixed;
+    bottom: 15px;
+    z-index: 100;
     width: 100%;
 }
-h6{
+#all, #favorites, #anedotes, #rediscover, #artifacts, #insights{
+    cursor: pointer;
     font-family: 'alteHassGrotesk_Regular';
     font-size: 12pt;
     border: 1px solid, black;
     background-color: #FFF9F1;
     padding: 0.5rem;
     border-radius: 2rem;
+    margin: 0.1rem;
+    opacity: 0.5; 
+
 }
+/* #filter button {
+    cursor: pointer;
+    font-family: 'alteHassGrotesk_Regular';
+    font-size: 12pt;
+    border: 1px solid, black;
+    background-color: #FFF9F1;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    margin: 0.1rem;
+    opacity: 0.5; 
+} */
+#filter button:hover {
+    background-color: rgba(127, 255, 212, 0.513);
+    color: rgb(58, 43, 43);
+    transition: .4s ease-in-out;
+    cursor: pointer;
+}
+
+/* h6{
+    font-family: 'alteHassGrotesk_Regular';
+    font-size: 12pt;
+    border: 1px solid, black;
+    background-color: #FFF9F1;
+    padding: 0.5rem;
+    border-radius: 2rem;
+} */
+
+.board-items{
+    position: absolute;
+    cursor: pointer;
+} 
+#i1{
+    left: 100vw;
+    top: 10vh;
+}
+#s1{
+    left: 15vw;
+    top: 120vh;
+}
+#a1{
+    left: 80vw;
+    Top: 15vh;
+}
+#v1{
+    left: 40vw;
+    Top: 50vh;
+}
+#at1{
+    left: 40vw;
+    Top: 50vh;
+}
+
+
 
 

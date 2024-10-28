@@ -5,16 +5,15 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet">
-        <img src="assets/postcardTrails.svg" style="position: absolute;top: 15px; left: 12px; width: 130px; height: auto;">
+        <img src="assets/postcardTrails.svg" style="position: fixed;top: 15px; left: 12px; width: 130px; height: auto;">
     </head>
-    <body onload="startTime()">
+    <body onload="startTime();">
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="script.js"></script>
-        <!-- <div class="postcard-1">
-            <div class="frontCard-1"></div>
-            <div class="backCard-1"></div>
-        </div> -->
-
+        <div class="grid"></div>
+        <input type='button' id='about' value='About'>
+        <div class="wrapper">
         <div class="aboutCard" id="Card">
             <div class="landingPageTextBox">
             <p>Welcome to Postcard Trails,<br>where each postcard serves<br>as a stepping stone on a<br>journey filled with memories,<br> 
@@ -25,11 +24,8 @@
             <div class="verticleLine"></div>
             <div class="rightContainer">
                 <div class="align">
-                    <div id="time"></div>  
+                    <div id="clock"></div>  
                     <a href="#" onclick="Hide(Card);">ⓧ</a>
-                    <!-- <button class="xButton" aria-label="Close alert" type="button" data-close>
-                        <span aria-hidden="true">&times;</span>
-                    </button> -->
                 </div>
                 <div class ="address">
                     <p2>To: You</p2>
@@ -43,14 +39,91 @@
                 </div>
             </div>
         </div>
-    <div class="nav">
-        <h6>All</h6>
+    </div>
+    <div class="move" id="pan">
+        <div class="board">
+            <a href="copehagen/kronborg_castle/index.html" class="board-items" id="i1" data-type="anecdotes">
+                <img src="assets/pics/i1.png" width="250px" height="auto"> 
+            </a>
+            <a href="" class="board-items" id="s1" data-type="anecdotes">
+                <img src="assets/pics/s1.png" width="250px" height="auto"> 
+            </a>
+            <a href="" class="board-items" id="a1" data-type="anecdotes">
+                <img src="assets/pics/a1.png" width="auto" height="250px"> 
+            </a>
+        <div class="artifact" id="artifact">
+            <img src="assets/artifacts/amsterdam.png" width="auto" height="120px" id="at1"> 
+            <img src="assets/artifacts/athena_ticket.png" width="150px" height="auto" id="at2"> 
+            <img src="assets/artifacts/capri_sorrento.png" width="150px" height="auto" id="at3"> 
+            <img src="assets/artifacts/funicolare_di_capri.png" width="120px" height="auto" id="at4"> 
+            <img src="assets/artifacts/laser-capri.png" width="200px" height="auto" id="at5"> 
+            <img src="assets/artifacts/napoli.png" width="auto" height="120px" id="at6"> 
+            <img src="assets/artifacts/prague_castle.png" width="200px" height="auto" id="at7"> 
+            <img src="assets/artifacts/rome_colosseum.png" width="120px" height="auto" id="at8"> 
+            <img src="assets/artifacts/versailles_paris.png" width="100px" height="auto" id="at9"> 
+            <img src="assets/artifacts/DKK.png" width="auto" height="150px" id="at10"> 
+            <img src="assets/artifacts/jungfrau.png" width="auto" height="150px" id="at11"> 
+        </div>
+        <div class="rediscover"id="videos">
+            <video width="auto" height="250"  class="board-items" id="v1" data-type="rediscover" controls>
+                <source src="assets/vids/big_ben.mp4" type="video/mp4">
+            </video>
+            <video width="250" height="auto" class="board-items" id="v2" data-type="rediscover" controls>
+                <source src="assets/vids/tower_bridge.mp4" type="video/mp4">
+            </video>
+            <video width="auto" height="250" class="board-items" id="v3" data-type="rediscover" controls>
+                <source src="assets/vids/windmill.mp4" type="video/mp4">
+            </video>
+            <video width="250" height="auto" class="board-items" id="v3" data-type="rediscover" controls>
+                <source src="assets/vids/heineken.mp4" type="video/mp4">
+            </video>
+            <video width="250" height="auto" class="board-items" id="v3" data-type="rediscover" controls>
+                <source src="assets/vids/zurich.mp4" type="video/mp4">
+            </video>
+            <video width="250" height="auto" class="board-items" id="v3" data-type="rediscover" controls>
+                <source src="assets/vids/mountain.mp4" type="video/mp4">
+            </video>
+            <video width="250" height="auto" class="board-items" id="v3" data-type="rediscover" controls>
+                <source src="assets/vids/to_paros.mp4" type="video/mp4">
+            </video>
+            <video width="250" height="auto" class="board-items" id="v3" data-type="rediscover" controls>
+                <source src="assets/vids/st_patricks.mp4" type="video/mp4">
+            </video>
+            <video width="250" height="auto" class="board-items" id="v3" data-type="rediscover" controls>
+                <source src="assets/vids/naples.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div>
+<!-- <div class="myDiv" onmousemove="myFunction(event)">
+    <h2 id="demo"></h2>
+</div> -->
+    
+
+    <div class="nav" id="filter">
+        <input type='button' id='all' value='All'>
+        <input type='button' id='favorites' value='Favorites'>
+        <input type='button' id='anedotes' value='Anecdotes'>
+        <input type='button' id='rediscover' value='Rediscover'>
+        <input type='button' id='artifacts' value='Artifacts'>
+        <input type='button' id='insights' value='Insights'>
+    
+
+        <!-- <button filter="all">All</button>
+        <button filter="favorites">Favorites</button>
+        <button filter="anecdotes" name="anecdotes">Anecdotes</button>
+        <button filter="rediscover" name="rediscover">Rediscover</button>
+        <button filter="artifacts">Artifacts</button>
+        <button filter="insights">Insights</button> -->
+        <!-- <h6>All</h6>
         <h6>Favorites</h6>
         <h6>Anecdotes</h6>
         <h6>Rediscover</h6>
         <h6>Artifacts</h6>
-        <h6>Insights</h6>
+        <h6>Insights</h6> -->
     </div>
-    <div class="frontCard-1"></div>
+    <!-- <button class="nav" data-category="favorites">Favorites</button>
+    <button class="nav" data-category="anecdotes">Anecdotes</button>
+    <button class="nav" data-category="artifacts">Artifacts</button> -->
     </body>
 </html>
