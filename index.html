@@ -5,9 +5,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=The+Girl+Next+Door&display=swap" rel="stylesheet">
-        <img src="assets/postcardTrails.svg" style="position: fixed;top: 15px; left: 12px; width: 130px; height: auto;">
+        <img src="assets/postcardTrails.svg" style="position: fixed;top: 15px; left: 12px; width: 130px; height: auto; z-index: 100000;">
     </head>
-    <body onload="startTime();">
+    <body onload="startTime();" onmousemove="myFunction(event)">
+        <h3 id="demo"></h3>
         
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="script.js"></script>
@@ -40,57 +41,109 @@
             </div>
         </div>
     </div>
-    <div class="move" id="pan">
-        <div class="board">
-            <a href="copehagen/kronborg_castle/index.html" class="board-items" id="i1" data-type="anecdotes">
-                <img src="assets/pics/i1.png" width="250px" height="auto"> 
-            </a>
-            <a href="" class="board-items" id="s1" data-type="anecdotes">
-                <img src="assets/pics/s1.png" width="250px" height="auto"> 
-            </a>
-            <a href="" class="board-items" id="a1" data-type="anecdotes">
-                <img src="assets/pics/a1.png" width="auto" height="250px"> 
-            </a>
-        <div class="artifact" id="artifact">
-            <img src="assets/artifacts/amsterdam.png" width="auto" height="120px" id="at1"> 
-            <img src="assets/artifacts/athena_ticket.png" width="150px" height="auto" id="at2"> 
-            <img src="assets/artifacts/capri_sorrento.png" width="150px" height="auto" id="at3"> 
-            <img src="assets/artifacts/funicolare_di_capri.png" width="120px" height="auto" id="at4"> 
-            <img src="assets/artifacts/laser-capri.png" width="200px" height="auto" id="at5"> 
-            <img src="assets/artifacts/napoli.png" width="auto" height="120px" id="at6"> 
-            <img src="assets/artifacts/prague_castle.png" width="200px" height="auto" id="at7"> 
-            <img src="assets/artifacts/rome_colosseum.png" width="120px" height="auto" id="at8"> 
-            <img src="assets/artifacts/versailles_paris.png" width="100px" height="auto" id="at9"> 
-            <img src="assets/artifacts/DKK.png" width="auto" height="150px" id="at10"> 
-            <img src="assets/artifacts/jungfrau.png" width="auto" height="150px" id="at11"> 
+    <div class="move">
+        <div id="board">
+            <div id="anecdote">
+                <a href="copehagen/kronborg_castle/index.html" class="board-items" id="i1">
+                    <img src="assets/pics/i1.png" width="250px" height="auto"> 
+                </a>
+                <a href="" class="board-items" id="s1">
+                    <img src="assets/pics/s1.png" width="250px" height="auto"> 
+                </a>
+                <a href="greece/paros/index.html" class="board-items" id="p1">
+                    <img src="assets/pics/p1.png" width="250px" height="auto"> 
+                </a>
+                <a href="amesterdamn/zaanse_schans/index.html" class="board-items" id="a1">
+                    <img src="assets/pics/a1.png" width="auto" height="250px"> 
+                </a>
+                <a href="" class="board-items" id="vi1">
+                    <img src="assets/pics/vi1.png" width="auto" height="250px"> 
+                </a>
+                <a href="italy/capri/index.html" class="board-items" id="c1">
+                    <img src="assets/pics/c1.png" width="auto" height="250px"> 
+                </a>
+                <a href="" class="board-items" id="s2">
+                    <img src="assets/pics/s2.png" width="250px" height="auto"> 
+                </a>
+                <a href="" class="board-items" id="s3">
+                    <img src="assets/pics/s3.png" width="250px" height="auto"> 
+                </a>
+                <a href="" class="board-items" id="s4">
+                    <img src="assets/pics/s4.png" width="auto" height="250px"> 
+                </a>
+                <a href="prague/index.html" class="board-items" id="cr1">
+                    <img src="assets/pics/cr1.png" width="auto" height="250px"> 
+                </a>
+                <a href="dublin/index.html" class="board-items" id="d1">
+                    <img src="assets/pics/d1.png" width="250px" height="auto"> 
+                </a>
+             </div>
+        <div id="artifact">
+            <img src="assets/artifacts/amsterdam.png" width="auto" height="120px" class="board-items" id="at1"> 
+            <img src="assets/artifacts/athena_ticket.png" width="150px" height="auto" class="board-items" id="at2"> 
+            <img src="assets/artifacts/capri_sorrento.png" width="150px" height="auto" class="board-items" id="at3"> 
+            <img src="assets/artifacts/funicolare_di_capri.png" width="120px" height="auto" class="board-items" id="at4"> 
+            <img src="assets/artifacts/laser-capri.png" width="200px" height="auto" class="board-items" id="at5"> 
+            <img src="assets/artifacts/napoli.png" width="auto" height="120px" class="board-items" id="at6"> 
+            <img src="assets/artifacts/prague_castle.png" width="200px" height="auto" class="board-items" id="at7"> 
+            <img src="assets/artifacts/rome_colosseum.png" width="120px" height="auto" class="board-items" id="at8"> 
+            <img src="assets/artifacts/versailles_paris.png" width="100px" height="auto" class="board-items" id="at9"> 
+            <img src="assets/artifacts/DKK.png" width="auto" height="150px" class="board-items" id="at10"> 
+            <img src="assets/artifacts/jungfrau.png" width="auto" height="150px" class="board-items" id="at11"> 
         </div>
-        <div class="rediscover"id="videos">
-            <video width="auto" height="250"  class="board-items" id="v1" data-type="rediscover" controls>
+        
+       
+        <div class="rediscover" id="videos">
+            <video width="auto" height="250"  class="board-items" id="v1" controls>
                 <source src="assets/vids/big_ben.mp4" type="video/mp4">
             </video>
-            <video width="250" height="auto" class="board-items" id="v2" data-type="rediscover" controls>
+            <video width="250" height="auto" class="board-items" id="v2" controls>
                 <source src="assets/vids/tower_bridge.mp4" type="video/mp4">
             </video>
-            <video width="auto" height="250" class="board-items" id="v3" data-type="rediscover" controls>
+            <video width="auto" height="250" class="board-items" id="v3" controls>
                 <source src="assets/vids/windmill.mp4" type="video/mp4">
             </video>
-            <video width="250" height="auto" class="board-items" id="v3" data-type="rediscover" controls>
+            <video width="250" height="auto" class="board-items" id="v4" controls>
                 <source src="assets/vids/heineken.mp4" type="video/mp4">
             </video>
-            <video width="250" height="auto" class="board-items" id="v3" data-type="rediscover" controls>
+            <video width="250" height="auto" class="board-items" id="v5" controls>
                 <source src="assets/vids/zurich.mp4" type="video/mp4">
             </video>
-            <video width="250" height="auto" class="board-items" id="v3" data-type="rediscover" controls>
+            <video width="250" height="auto" class="board-items" id="v6" controls>
                 <source src="assets/vids/mountain.mp4" type="video/mp4">
             </video>
-            <video width="250" height="auto" class="board-items" id="v3" data-type="rediscover" controls>
+            <video width="250" height="auto" class="board-items" id="v7" controls>
                 <source src="assets/vids/to_paros.mp4" type="video/mp4">
             </video>
-            <video width="250" height="auto" class="board-items" id="v3" data-type="rediscover" controls>
+            <video width="250" height="auto" class="board-items" id="v8" controls>
                 <source src="assets/vids/st_patricks.mp4" type="video/mp4">
             </video>
-            <video width="250" height="auto" class="board-items" id="v3" data-type="rediscover" controls>
+            <video width="250" height="auto" class="board-items" id="v9" controls>
                 <source src="assets/vids/naples.mp4" type="video/mp4">
+            </video>
+            <video width="auto" height="250" class="board-items" id="v10" controls>
+                <source src="assets/vids/versatile.mp4" type="video/mp4">
+            </video>
+            <video width="auto" height="250" class="board-items" id="v11" controls>
+                <source src="assets/vids/to-go.mp4" type="video/mp4">
+            </video>
+            <video width="250" height="auto" class="board-items" id="v12" controls>
+                <source src="assets/vids/bern.mp4" type="video/mp4">
+            </video>
+            <video width="auto" height="250" class="board-items" id="v13" controls>
+                <source src="assets/vids/cows.mp4" type="video/mp4">
+            </video>
+            <video width="250" height="auto" class="board-items" id="v14" controls>
+                <source src="assets/vids/football.mp4" type="video/mp4">
+            </video>
+            <video width="auto" height="250" class="board-items" id="v15" controls>
+                <source src="assets/vids/enroute.mp4" type="video/mp4">
+            </video>
+            <video width="250" height="auto" class="board-items" id="v16" controls>
+                <source src="assets/vids/clock.mp4" type="video/mp4">
+            </video>
+            <video width="auto" height="250" class="board-items" id="v17" controls>
+                <source src="assets/vids/shine.mp4" type="video/mp4">
             </video>
         </div>
     </div>
@@ -102,28 +155,11 @@
 
     <div class="nav" id="filter">
         <input type='button' id='all' value='All'>
-        <input type='button' id='favorites' value='Favorites'>
+        <!-- <input type='button' id='favorites' value='Favorites'> -->
         <input type='button' id='anedotes' value='Anecdotes'>
-        <input type='button' id='rediscover' value='Rediscover'>
+        <input type='button' id='rediscover' value='Memories'>
         <input type='button' id='artifacts' value='Artifacts'>
-        <input type='button' id='insights' value='Insights'>
-    
-
-        <!-- <button filter="all">All</button>
-        <button filter="favorites">Favorites</button>
-        <button filter="anecdotes" name="anecdotes">Anecdotes</button>
-        <button filter="rediscover" name="rediscover">Rediscover</button>
-        <button filter="artifacts">Artifacts</button>
-        <button filter="insights">Insights</button> -->
-        <!-- <h6>All</h6>
-        <h6>Favorites</h6>
-        <h6>Anecdotes</h6>
-        <h6>Rediscover</h6>
-        <h6>Artifacts</h6>
-        <h6>Insights</h6> -->
+        <!-- <input type='button' id='insights' value='Insights'> -->  
     </div>
-    <!-- <button class="nav" data-category="favorites">Favorites</button>
-    <button class="nav" data-category="anecdotes">Anecdotes</button>
-    <button class="nav" data-category="artifacts">Artifacts</button> -->
     </body>
 </html>

@@ -28,6 +28,7 @@
     font-family: 'alteHassGrotesk_Regular';
     font-size: 12pt;
     position: fixed;
+    position:-webkit-sticky;
     top: 15px; 
     left: 48%;
     border: none;
@@ -37,6 +38,10 @@
     background-color: #FFF9F1;
     padding: 0.5rem;
     border-radius: 2rem;
+
+}
+#about:hover{
+    background-color:#fff9e3;
 }
 #map{
     font-family: 'alteHassGrotesk_Regular';
@@ -52,17 +57,44 @@
     padding: 0.5rem;
     border-radius: 2rem;
 } 
+#right-swipe{
+    font-family: 'alteHassGrotesk_Regular';
+    font-size: 12pt;
+    position: fixed;
+    top: 50%; 
+    right:10%;
+    border: none;
+    background-color: transparent;
+    z-index: 1000000;
+    border: 1px solid, black;
+    background-color: #FFF9F1;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
+#left-swipe{
+    font-family: 'alteHassGrotesk_Regular';
+    font-size: 12pt;
+    position: fixed;
+    top: 50%; 
+    left:10%;
+    border: none;
+    background-color: transparent;
+    z-index: 1000000;
+    border: 1px solid, black;
+    background-color: #FFF9F1;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
 #demo{
     position: fixed;
-    bottom: 0px; 
-    left: 20px;
+    right: 20px;
     z-index: 1000000;
 }
 .grid{
     position: absolute;
     inset: 0;
-    height: 170vh;
-    width: 150vw;
+    height: 423vh;
+    width: 317vw;
     background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
     linear-gradient(to bottom, #80808012 1px, transparent 1px);
     background-size: 24px 24px;
@@ -177,10 +209,24 @@ body{
 #location{
     font-family: 'alteHassGrotesk_Regular';
     font-size: 10pt;
+    line-height: 11pt;
     text-align: right;
     position:absolute;
     bottom: 20px;
     right:20px;
+}
+.slidein-from-right {
+    -webkit-animation: slide 500ms;
+}
+@-webkit-keyframes slide {
+    from {
+        opacity: 0;
+        -webkit-transform:translateX(100%);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform:translateX(0%);
+    }
 }
 h1{
     color: #FFF9F1;
@@ -191,11 +237,26 @@ h1{
     bottom: 15px;
     width: 100%;
 }
+h4{
+    color: #FFF9F1;
+    font-family: 'alteHassGrotesk_Regular';
+    display: flex;
+    justify-content: center;
+    position:-webkit-sticky;
+    position: fixed;
+    bottom: 0px;
+    font-size: 12pt;
+    width: 100%;
+}
 h2{
-    font-family:  'alteHassGrotesk_Bold';
+    font-family: 'alteHassGrotesk_Bold';
     font-size: 20pt;
     line-height: 0; 
     text-transform: uppercase;
+}
+h3{
+    font-family: 'alteHassGrotesk_Bold';
+    font-size: 20pt;
 }
 p{
     font-family: "The Girl Next Door",cursive;
@@ -228,7 +289,8 @@ p3{
     z-index: 100;
     width: 100%;
 }
-#all, #favorites, #anedotes, #rediscover, #artifacts, #insights{
+
+#all, #anedotes, #rediscover, #artifacts{
     cursor: pointer;
     font-family: 'alteHassGrotesk_Regular';
     font-size: 12pt;
@@ -238,59 +300,269 @@ p3{
     border-radius: 2rem;
     margin: 0.1rem;
     opacity: 0.5; 
-
-}
-/* #filter button {
-    cursor: pointer;
-    font-family: 'alteHassGrotesk_Regular';
-    font-size: 12pt;
-    border: 1px solid, black;
-    background-color: #FFF9F1;
-    padding: 0.5rem;
-    border-radius: 2rem;
-    margin: 0.1rem;
-    opacity: 0.5; 
-} */
-#filter button:hover {
-    background-color: rgba(127, 255, 212, 0.513);
-    color: rgb(58, 43, 43);
-    transition: .4s ease-in-out;
-    cursor: pointer;
 }
 
-/* h6{
+#all:hover{
+    background-color:#fff9e3;
+}
+#anedotes:hover{
+    background-color:#fff9e3;
+}
+#artifacts:hover{
+    background-color:#fff9e3;
+}
+#rediscover:hover{
+    background-color:#fff9e3;
+}
+
+/* Zoom effect */
+#at1:hover {
+    transform: scale(3.7);
+    z-index: 100;
+}
+#at2:hover {
+    transform: scale(3.5);
+    z-index: 100;
+}
+#at3:hover {
+    transform: scale(3.5);
+    z-index: 100;
+}
+#at4:hover {
+    transform: scale(3.5);
+    z-index: 100;
+}
+#at5:hover {
+    transform: scale(3.5);
+    z-index: 100;
+}
+#at6:hover {
+    transform: scale(3.5);
+    z-index: 100;
+}
+#at7:hover {
+    transform: scale(3.5);
+    z-index: 100;
+}
+#at8:hover {
+    transform: scale(3.5);
+    z-index: 100;
+}
+#at9:hover {
+    transform: scale(3.5);
+    z-index: 100;
+}
+#at10:hover {
+    transform: scale(3.5);
+    z-index: 100;
+}
+#at11:hover {
+    transform: scale(3.5);
+    z-index: 100;
+}
+.caption {
     font-family: 'alteHassGrotesk_Regular';
-    font-size: 12pt;
-    border: 1px solid, black;
-    background-color: #FFF9F1;
-    padding: 0.5rem;
-    border-radius: 2rem;
-} */
+    text-align: center;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+span:hover {
+    opacity: 1;
+}
 
 .board-items{
     position: absolute;
     cursor: pointer;
+    transition: transform 0.3s; /* Smooth zoom on ho ver */
 } 
+/* copenhagen kronborg castle */
 #i1{
-    left: 100vw;
-    top: 10vh;
+    left: 190vw;
+    top: 5vh;
 }
-#s1{
-    left: 15vw;
-    top: 120vh;
+#at10{
+    left: 193vw;
+    Top: 30vh;
+    transform: rotate(3deg);
+}
+
+/* amesterdamn */
+#at1{
+    left: 102vw;
+    Top: 62vh;
 }
 #a1{
-    left: 80vw;
+    left: 105vw;
+    Top: 27vh;
+}
+#v11{
+    left: 85vw;
+    Top: 65vh;
+
+}
+/* amesterdamn windmill */
+#v3{
+    left: 90vw;
+    Top: 25vh;
+}
+/* amesterdamn henieken */
+#v4{
+    left: 110vw;
+    Top: 60vh;
+}
+/* london football */
+#v14{
+    left: 31vw;
+    Top: 47vh;
+}
+/* london bigben */
+#v1{
+    left: 33vw;
+    Top: 75vh;
+}
+/* london tower bridge */
+#v2{
+    left: 50vw;
+    Top: 70vh;
+}
+/* paros */
+#at2{
+    left: 260vw;
+    Top: 370vh;
+}
+#p1{
+    left: 295vw;
+    Top: 395vh;
+    transform: rotate(3deg);
+}
+#v7{
+    left: 275vw;
+    Top: 390vh;
+}
+
+/* spain */
+#s1{
+    left: 15vw;
+    top: 370vh;
+}
+#s2{
+    left: 20vw;
+    top: 345vh;
+}
+#s3{
+    left: 40vw;
+    top: 355vh;
+}
+#s4{
+    left: 35vw;
+    top: 380vh;
+}
+#v16{
+    left: 50vw;
+    Top: 380vh;
+}
+
+/* zurich */
+#v5{
+    left: 140vw;
+    Top: 155vh;
+}
+/* bern */
+#v12{
+    left: 118vw;
+    Top: 165vh;
+}
+#v15{
+    left: 104vw;
+    Top: 170vh;
+}
+/* grindewald */
+#v6{
+    left: 135vw;
+    Top: 195vh;
+}
+#v13{
+    left: 155vw;
+    Top: 205vh;
+}
+#at11{
+    left: 125vw;
+    Top: 205vh;
+}
+
+/* dublin */
+#v8{
+    left: 5vw;
     Top: 15vh;
 }
-#v1{
-    left: 40vw;
-    Top: 50vh;
+#d1{
+    left: 7vw;
+    Top: 40vh;
 }
-#at1{
-    left: 40vw;
-    Top: 50vh;
+
+/* naples */
+#v9{
+    left: 200vw;
+    Top: 290vh;
 }
+#at3{
+    left: 218vw;
+    Top: 335vh;
+}
+#at4{
+    left: 205vw;
+    Top: 355vh;
+}
+#at5{
+    left: 190vw;
+    Top: 360vh;
+}
+#at6{
+    left: 210vw;
+    Top: 320vh;
+}
+#c1{
+    left: 215vw;
+    Top: 353vh;
+}
+/* rome */
+#at8{
+    left: 185vw;
+    Top: 260vh;
+}
+
+/* prague */
+#at7{
+    left: 180vw;
+    Top: 100vh;
+}
+#cr1{
+    left: 195vw;
+    Top: 90vh;
+}
+/* vienna */
+#vi1{
+    left: 220vw;
+    Top: 130vh;
+}
+
+/* paris */
+#at9{
+    left: 80vw;
+    Top: 115vh;
+}
+#v10{
+    left: 75vw;
+    Top: 125vh;
+}
+#v17{
+    left: 60vw;
+    Top: 115vh;
+}
+
+
 
 
 

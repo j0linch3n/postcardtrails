@@ -27,39 +27,51 @@ jQuery(document).ready(function(){
 //all button
 jQuery(document).ready(function(){
   jQuery('#all').on('click', function(event) {        
-      jQuery('#board').toggle('show');
-      $(this).css("opacity", 1);
+    document.getElementById("artifact").style.display = "block";
+    document.getElementById("anecdote").style.display = "block";
+    document.getElementById("videos").style.display = "block";
+    $(this).css("opacity", 1);
+    $('#anedotes').css("opacity", 0.5);
+    $('#rediscover').css("opacity", 0.5);
+    $('#artifacts').css("opacity", 0.5);
   });
 });
-
+//artifact button
 jQuery(document).ready(function(){
   jQuery('#artifacts').on('click', function(event) {        
-      jQuery('#artifact').toggle('show');
+    document.getElementById("artifact").style.display = "block";
+    document.getElementById("anecdote").style.display = "none";
+    document.getElementById("videos").style.display = "none";
       $(this).css("opacity", 1);
+      $('#anedotes').css("opacity", 0.5);
+      $('#rediscover').css("opacity", 0.5);
+      $('#all').css("opacity", 0.5);
   });
 });
-
+//video button
 jQuery(document).ready(function(){
   jQuery('#rediscover').on('click', function(event) {        
-      jQuery('#videos').toggle('show');
+    document.getElementById("artifact").style.display = "none";
+    document.getElementById("anecdote").style.display = "none";
+    document.getElementById("videos").style.display = "block";
       $(this).css("opacity", 1);
+      $('#anedotes').css("opacity", 0.5);
+      $('#artifacts').css("opacity", 0.5);
+      $('#all').css("opacity", 0.5);
   });
 });
-
-
-const buttons = document.querySelectorAll('.nav');
-
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        const category = button.dataset.category;
-        console.log('artifact:', category);
-        
-
-
-        // Perform actions based on the selected category
-        // ...
-      });
-    });
+//anedote button
+jQuery(document).ready(function(){
+  jQuery('#anedotes').on('click', function(event) {        
+    document.getElementById("artifact").style.display = "none";
+    document.getElementById("anecdote").style.display = "block";
+    document.getElementById("videos").style.display = "none";
+      $(this).css("opacity", 1);
+      $('#rediscover').css("opacity", 0.5);
+      $('#artifacts').css("opacity", 0.5);
+      $('#all').css("opacity", 0.5);
+  });
+});
 
 let abc = document.getElementById("pan");
 function myFunction(e) {
