@@ -85,6 +85,20 @@
     padding: 0.5rem;
     border-radius: 2rem;
 }
+#site{
+    font-family: 'alteHassGrotesk_Regular';
+    font-size: 12pt;
+    position: fixed;
+    bottom: 50px; 
+    left: 48%;
+    border: none;
+    background-color: transparent;
+    z-index: 1000000;
+    border: 1px solid, black;
+    background-color: #FFF9F1;
+    padding: 0.5rem;
+    border-radius: 2rem;
+}
 #demo{
     position: fixed;
     right: 20px;
