@@ -215,7 +215,7 @@ body{
     bottom: 20px;
     right:20px;
 }
-.slidein-from-right {
+/* .slidein-from-right {
     -webkit-animation: slide 500ms;
 }
 @-webkit-keyframes slide {
@@ -227,7 +227,7 @@ body{
         opacity: 1;
         -webkit-transform:translateX(0%);
     }
-}
+} */
 h1{
     color: #FFF9F1;
     display: flex;
