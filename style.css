@@ -107,8 +107,8 @@
 .grid{
     position: absolute;
     inset: 0;
-    height: 423vh;
-    width: 317vw;
+    /* height: 423vh;
+    width: 317vw; */
     background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
     linear-gradient(to bottom, #80808012 1px, transparent 1px);
     background-size: 24px 24px;
@@ -251,6 +251,7 @@ h1{
     bottom: 15px;
     width: 100%;
     text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.5);
+    padding-bottom: 5px;
 }
 h4{
     color: #FFF9F1;
@@ -340,15 +341,7 @@ p3{
     transform: scale(3.5);
     z-index: 100;
 }
-#at3:hover {
-    transform: scale(3.5);
-    z-index: 100;
-}
 #at4:hover {
-    transform: scale(3.5);
-    z-index: 100;
-}
-#at5:hover {
     transform: scale(3.5);
     z-index: 100;
 }
@@ -395,23 +388,31 @@ span:hover {
 } 
 /* copenhagen kronborg castle */
 #i1{
-    left: 190vw;
-    top: 5vh;
+    /* left: 190vw;
+    top: 5vh; */
+    top:3%;
+    left:20%;
 }
 #at10{
-    left: 193vw;
+    /* left: 193vw;
     Top: 30vh;
-    transform: rotate(3deg);
+    transform: rotate(3deg); */
+    top:15%;
+    left:20%;
 }
 
 /* amesterdamn */
 #at1{
-    left: 102vw;
-    Top: 62vh;
+    /* left: 102vw;
+    Top: 62vh; */
+    top:2%;
+    left:39%;
 }
 #a1{
-    left: 105vw;
-    Top: 27vh;
+    /* left: 105vw;
+    Top: 27vh; */
+    top:10%;
+    left:40%
 }
 #v11{
     left: 85vw;
@@ -445,13 +446,17 @@ span:hover {
 }
 /* paros */
 #at2{
-    left: 260vw;
-    Top: 370vh;
+    /* left: 260vw;
+    Top: 370vh; */
+    top:65%;
+    left:45%;
 }
 #p1{
-    left: 295vw;
+    /* left: 295vw;
     Top: 395vh;
-    transform: rotate(3deg);
+    transform: rotate(3deg); */
+    top:70%;
+    left:50%;
 }
 #v7{
     left: 275vw;
@@ -460,20 +465,28 @@ span:hover {
 
 /* spain */
 #s1{
-    left: 15vw;
-    top: 370vh;
+    /* left: 15vw;
+    top: 370vh; */
+    left:7%;
+    bottom:7%;
 }
 #s2{
-    left: 20vw;
-    top: 345vh;
+    /* left: 20vw;
+    top: 345vh; */
+    right:3%;
+    top:10%;
 }
 #s3{
-    left: 40vw;
-    top: 355vh;
+    /* left: 40vw;
+    top: 355vh; */
+    right:15%;
+    top:10%;
 }
 #s4{
-    left: 35vw;
-    top: 380vh;
+    /* left: 35vw;
+    top: 380vh; */
+    top:7%;
+    left:7%;
 }
 #v16{
     left: 50vw;
@@ -504,8 +517,10 @@ span:hover {
     Top: 205vh;
 }
 #at11{
-    left: 125vw;
-    Top: 205vh;
+    /* left: 125vw;
+    Top: 205vh; */
+    top:8%;
+    left:75%;
 }
 
 /* dublin */
@@ -514,8 +529,8 @@ span:hover {
     Top: 15vh;
 }
 #d1{
-    left: 7vw;
-    Top: 40vh;
+    left: 2%;
+    Top: 40%;
 }
 
 /* naples */
@@ -523,59 +538,72 @@ span:hover {
     left: 200vw;
     Top: 290vh;
 }
-#at3{
-    left: 218vw;
-    Top: 335vh;
-}
 #at4{
-    left: 205vw;
-    Top: 355vh;
-}
-#at5{
-    left: 190vw;
-    Top: 360vh;
+    /* left: 205vw;
+    Top: 355vh; */
+    top:83%;
+    left:73%;
 }
 #at6{
-    left: 210vw;
-    Top: 320vh;
+    /* left: 210vw;
+    Top: 320vh; */
+    top:46%;
+    left:77%;
 }
 #c1{
-    left: 215vw;
-    Top: 353vh;
+    /* left: 215vw;
+    Top: 353vh; */
+    left:68%;
+    top:55%;
 }
 /* rome */
 #at8{
-    left: 185vw;
-    Top: 260vh;
+    /* left: 185vw;
+    Top: 260vh; */
+    top: 70%;
+    left:20%;
 }
 
 /* prague */
 #at7{
-    left: 180vw;
-    Top: 100vh;
+    /* left: 180vw;
+    Top: 100vh; */
+    top:31%;
+    left:85%;
 }
 #cr1{
-    left: 195vw;
-    Top: 90vh;
+    /* left: 195vw;
+    Top: 90vh; */
+    top:40%;
+    left:83%;
 }
 /* vienna */
 #vi1{
-    left: 220vw;
-    Top: 130vh;
+    /* left: 220vw;
+    Top: 130vh; */
+    top:31%;
+    left:26%;
 }
 
 /* paris */
 #at9{
-    left: 80vw;
-    Top: 115vh;
+    /* left: 80vw;
+    Top: 115vh; */
+    top:63%;
+    left:2%;
+    z-index:10;
 }
 #v10{
-    left: 75vw;
-    Top: 125vh;
+    /* left: 75vw;
+    Top: 125vh; */
+    top:85%;
+    left:1%;
 }
 #v17{
-    left: 60vw;
-    Top: 115vh;
+    /* left: 60vw;
+    Top: 115vh; */
+    left:4%;
+    bottom:2%;
 }
 
 

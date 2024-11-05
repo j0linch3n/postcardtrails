@@ -13,17 +13,44 @@
                 background-repeat: no-repeat;
                 background-size: cover;
             }
-            
+            #ppc1{
+                width: 300px;
+                height: auto;
+                position: fixed;
+                left: 15%;
+                top: 35%;
+                transform:rotate(-5deg);
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            }
+            #ppc1:hover{
+                transform: scale(2.5) rotate(0deg);
+                z-index: 100;
+                top:37%;
+                left:39.6%;
+            }
+            #ppc2{
+                width: 300px;
+                height: auto;
+                position: fixed;
+                left: 50%;
+                top: 35%;
+                transform:rotate(3deg);
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            }
+            #ppc2:hover{
+                transform: scale(2.5) rotate(0deg);
+                z-index: 100;
+                top:37%;
+                left:39.6%;
+            }
         </style>
     </head>
     <body>
         <a href="paros_park_hike.html">
-            <img src="../pics/scenes/s1.webp" width="200px" height="auto" style="position:fixed; left: 15%; top:35%; transform:rotate(-5deg);
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;"> 
+            <img src="../pics/preview/ppc1.webp" id="ppc1"> 
         </a>
         <a href="sunset_at_paros_park.html">
-            <img src="../pics/scenes/s2.webp" width="200px" height="auto" style="position:fixed; left: 50%; top:25%; transform:rotate(3deg);
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;"> 
+            <img src="../pics/preview/ppc2.webp" id="ppc2"> 
         </a>
         <video width="auto" height="350" style="position: fixed;top:20vh;right:10vw;transform: rotate(4deg);
         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;" controls>
