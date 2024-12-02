@@ -84,5 +84,23 @@ function myFunction(e) {
   abc.style.transform ='translate(' + xx + 'px, ' + yy + 'px)';
 }
 
+function getQueryParam(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
 
+jQuery(document).ready(function() {
+  // Check the 'skipAbout' parameter
+  if (getQueryParam('skipAbout') === 'true') {
+      // Skip showing the aboutCard
+      Hide(document.getElementById("Card"));
+  } else if (!localStorage.getItem('hasVisited')) {
+      // First visit: Show the aboutCard
+      Show(document.getElementById("Card"));
+      localStorage.setItem('hasVisited', 'true');
+  } else {
+      // Not the first visit: Hide the aboutCard
+      Hide(document.getElementById("Card"));
+  }
+});
 
