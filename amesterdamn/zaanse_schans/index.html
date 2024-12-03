@@ -9,39 +9,54 @@
         <style>
             body{
                 transition: 3s ease-in-out;
-                background-image:url('../pics/bk/bk1.png');
+                background-image:url('../pics/bk/bk1.webp');
                 background-repeat: no-repeat;
                 background-size: cover;
             }
-            #i1{
-                width: 300px;
+            #i1, #p2 {
+                width: 400px;
                 height: auto;
                 position: fixed;
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+                will-change: transform;
+            }
+
+            #i1 {
                 left: 14%;
                 top: 55%;
-                transform:rotate(-5deg);
-                box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+                transform: rotate(-5deg);
             }
-            #i1:hover{
-                transform: scale(2.5) rotate(0deg);
+
+            #i1:hover {
+                transform: scale(1.8) translate(50%, -40%) rotate(0deg);
                 z-index: 100;
-                top:37%;
-                left:39.6%;
+                transition: transform 0.5s ease-out;
             }
-            #p2{
-                width: 300px;
-                height: auto;
-                position: fixed;
+
+            #p2 {
                 left: 50%;
                 top: 52%;
                 transform: rotate(3deg);
-                box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
             }
-            #p2:hover{
-                transform: scale(2.5);
+
+            #p2:hover {
+                transform: scale(1.8) translate(-25%, -30%);
                 z-index: 100;
-                top:37%;
-                left:39.6%;
+                transition: transform 0.5s ease-out;
+            }
+            #at1{
+                top:30%;
+                left:33%;
+                transform:  rotate(-3deg);
+            }
+            #v3{
+                left:80%;
+                position: absolute;
+            }
+            #v11{
+                left:50%;
+                top:5%;
+                position: absolute;
             }
 
 
@@ -54,9 +69,18 @@
         <a href="windmill.html">
             <img src="../pics/previews/p2.webp" id="p2"> 
         </a>
-        <!-- <a href="kronborg_beach.html">
-            <img src="../pics/preview/3.png" width="200px" height="auto" style="position:fixed; left: 73%; top:50%; transform:rotate(5deg);"> 
-        </a> -->
+        <div id="artifact">
+            <img src="../../assets/artifacts/amsterdam.png" width="auto" height="120px" class="board-items" id="at1"> 
+        </div>
+        <div class="rediscover" id="videos">
+            <video width="auto" height="350" class="board-items" id="v3"  controls>
+                <source src="../../assets/vids/windmill.mp4" type="video/mp4">
+            </video>
+            <!-- <video width="auto" height="350" class="board-items" id="v11" controls>
+                <source src="../../assets/vids/to-go.mp4" type="video/mp4">
+            </video> -->
+        </div>
+
         <h1>Zaanse Schans</h1>
         <h4>Zaandam, Netherlands</h4>
     
