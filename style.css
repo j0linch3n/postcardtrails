@@ -10,20 +10,7 @@
     font-family: 'alteHassGrotesk_Regular';
     src: url(assets/AlteHaasGroteskRegular.ttf);
 }
-/* .myDiv{
-    border: 1px solid black;
-    width: 150vw;
-    height: 170vh;
-    position: absolute;
-}
-.move {
-    background-color: aqua;
-    overflow: hidden;
-    z-index: 0;
-    width: 150vw;
-    height: 170vh;
-    
-} */
+
 #about{
     font-family: 'alteHassGrotesk_Regular';
     font-size: 12pt;
@@ -103,16 +90,6 @@
     position: fixed;
     right: 20px;
     z-index: 1000000;
-}
-.grid{
-    position: absolute;
-    inset: 0;
-    /* height: 423vh;
-    width: 317vw; */
-    background-image: linear-gradient(to right, #80808012 1px, transparent 1px),
-    linear-gradient(to bottom, #80808012 1px, transparent 1px);
-    background-size: 24px 24px;
-    z-index: -100;
 }
 body{
     background-color: #FFF9F1;
@@ -229,27 +206,14 @@ body{
     bottom: 20px;
     right:20px;
 }
-/* .slidein-from-right {
-    -webkit-animation: slide 500ms;
-}
-@-webkit-keyframes slide {
-    from {
-        opacity: 0;
-        -webkit-transform:translateX(100%);
-    }
-    to {
-        opacity: 1;
-        -webkit-transform:translateX(0%);
-    }
-} */
 h1{
     color: #FFF9F1;
     display: flex;
     justify-content: center;
     position:-webkit-sticky;
     position: fixed;
-    bottom: 15px;
     width: 100%;
+    bottom: 15px;
     text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.5);
     padding-bottom: 5px;
 }
@@ -341,7 +305,15 @@ p3{
     transform: scale(3.5);
     z-index: 100;
 }
+#at3:hover {
+    transform: scale(3.5);
+    z-index: 100;
+}
 #at4:hover {
+    transform: scale(3.5);
+    z-index: 100;
+}
+#at5:hover {
     transform: scale(3.5);
     z-index: 100;
 }
@@ -455,8 +427,8 @@ span:hover {
     /* left: 295vw;
     Top: 395vh;
     transform: rotate(3deg); */
-    top:70%;
-    left:50%;
+    top:67%;
+    left:48%;
 }
 #v7{
     left: 275vw;
@@ -470,11 +442,11 @@ span:hover {
     left:7%;
     bottom:7%;
 }
-#s2{
+#z1{
     /* left: 20vw;
     top: 345vh; */
-    right:3%;
-    top:10%;
+    right:1%;
+    bottom:2%;
 }
 #s3{
     /* left: 40vw;
@@ -529,8 +501,8 @@ span:hover {
     Top: 15vh;
 }
 #d1{
-    left: 2%;
-    Top: 40%;
+    left: 5%;
+    Top: 45%;
 }
 
 /* naples */
@@ -593,6 +565,10 @@ span:hover {
     left:2%;
     z-index:10;
 }
+#f1{
+    top:10%;
+    left:7%;
+}
 #v10{
     /* left: 75vw;
     Top: 125vh; */
@@ -604,6 +580,22 @@ span:hover {
     Top: 115vh; */
     left:4%;
     bottom:2%;
+}
+#ldn{
+    left:54%;
+    top:27%;
+}
+#sa1{
+    left:28%;
+    bottom:9%;
+}
+#g1{
+    left:25%;
+    top:30%;
+}
+#dm1{
+    right:5%;
+    top:10%;
 }
 
 
