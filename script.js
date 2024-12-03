@@ -18,71 +18,12 @@ function Hide(HideID)
 {
   HideID.style.display = "none"; 
 }
+
 jQuery(document).ready(function(){
   jQuery('#about').on('click', function(event) {        
       jQuery('#Card').toggle('show');
   });
 });
-
-//all button
-jQuery(document).ready(function(){
-  jQuery('#all').on('click', function(event) {        
-    document.getElementById("artifact").style.display = "block";
-    document.getElementById("anecdote").style.display = "block";
-    document.getElementById("videos").style.display = "block";
-    $(this).css("opacity", 1);
-    $('#anedotes').css("opacity", 0.5);
-    $('#rediscover').css("opacity", 0.5);
-    $('#artifacts').css("opacity", 0.5);
-  });
-});
-//artifact button
-jQuery(document).ready(function(){
-  jQuery('#artifacts').on('click', function(event) {        
-    document.getElementById("artifact").style.display = "block";
-    document.getElementById("anecdote").style.display = "none";
-    document.getElementById("videos").style.display = "none";
-      $(this).css("opacity", 1);
-      $('#anedotes').css("opacity", 0.5);
-      $('#rediscover').css("opacity", 0.5);
-      $('#all').css("opacity", 0.5);
-  });
-});
-//video button
-jQuery(document).ready(function(){
-  jQuery('#rediscover').on('click', function(event) {        
-    document.getElementById("artifact").style.display = "none";
-    document.getElementById("anecdote").style.display = "none";
-    document.getElementById("videos").style.display = "block";
-      $(this).css("opacity", 1);
-      $('#anedotes').css("opacity", 0.5);
-      $('#artifacts').css("opacity", 0.5);
-      $('#all').css("opacity", 0.5);
-  });
-});
-//anedote button
-jQuery(document).ready(function(){
-  jQuery('#anedotes').on('click', function(event) {        
-    document.getElementById("artifact").style.display = "none";
-    document.getElementById("anecdote").style.display = "block";
-    document.getElementById("videos").style.display = "none";
-      $(this).css("opacity", 1);
-      $('#rediscover').css("opacity", 0.5);
-      $('#artifacts').css("opacity", 0.5);
-      $('#all').css("opacity", 0.5);
-  });
-});
-
-let abc = document.getElementById("pan");
-function myFunction(e) {
-  let x = e.clientX;
-  let y = e.clientY;
-  let coor = "Coordinates: (" + x + "," + y + ")";
-  document.getElementById("demo").innerHTML = coor;
-  let xx = 0.6 - (x * ((1300/(200/6)*3)/250));
-  let yy = 0.6 - (y * ((2000/(200/6)*3)/250));
-  abc.style.transform ='translate(' + xx + 'px, ' + yy + 'px)';
-}
 
 function getQueryParam(param) {
   const urlParams = new URLSearchParams(window.location.search);
@@ -103,4 +44,67 @@ jQuery(document).ready(function() {
       Hide(document.getElementById("Card"));
   }
 });
+
+// //all button
+// jQuery(document).ready(function(){
+//   jQuery('#all').on('click', function(event) {        
+//     document.getElementById("artifact").style.display = "block";
+//     document.getElementById("anecdote").style.display = "block";
+//     document.getElementById("videos").style.display = "block";
+//     $(this).css("opacity", 1);
+//     $('#anedotes').css("opacity", 0.5);
+//     $('#rediscover').css("opacity", 0.5);
+//     $('#artifacts').css("opacity", 0.5);
+//   });
+// });
+// //artifact button
+// jQuery(document).ready(function(){
+//   jQuery('#artifacts').on('click', function(event) {        
+//     document.getElementById("artifact").style.display = "block";
+//     document.getElementById("anecdote").style.display = "none";
+//     document.getElementById("videos").style.display = "none";
+//       $(this).css("opacity", 1);
+//       $('#anedotes').css("opacity", 0.5);
+//       $('#rediscover').css("opacity", 0.5);
+//       $('#all').css("opacity", 0.5);
+//   });
+// });
+// //video button
+// jQuery(document).ready(function(){
+//   jQuery('#rediscover').on('click', function(event) {        
+//     document.getElementById("artifact").style.display = "none";
+//     document.getElementById("anecdote").style.display = "none";
+//     document.getElementById("videos").style.display = "block";
+//       $(this).css("opacity", 1);
+//       $('#anedotes').css("opacity", 0.5);
+//       $('#artifacts').css("opacity", 0.5);
+//       $('#all').css("opacity", 0.5);
+//   });
+// });
+// //anedote button
+// jQuery(document).ready(function(){
+//   jQuery('#anedotes').on('click', function(event) {        
+//     document.getElementById("artifact").style.display = "none";
+//     document.getElementById("anecdote").style.display = "block";
+//     document.getElementById("videos").style.display = "none";
+//       $(this).css("opacity", 1);
+//       $('#rediscover').css("opacity", 0.5);
+//       $('#artifacts').css("opacity", 0.5);
+//       $('#all').css("opacity", 0.5);
+//   });
+// });
+
+// let abc = document.getElementById("pan");
+// function myFunction(e) {
+//   let x = e.clientX;
+//   let y = e.clientY;
+//   let coor = "Coordinates: (" + x + "," + y + ")";
+//   document.getElementById("demo").innerHTML = coor;
+//   let xx = 0.6 - (x * ((1300/(200/6)*3)/250));
+//   let yy = 0.6 - (y * ((2000/(200/6)*3)/250));
+//   abc.style.transform ='translate(' + xx + 'px, ' + yy + 'px)';
+// }
+
+
+
 
